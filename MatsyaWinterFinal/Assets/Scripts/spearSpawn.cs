@@ -54,7 +54,11 @@ public class spearSpawn : MonoBehaviour {
 		}
 		t = Quaternion.LookRotation(randomDirection);;
 		spearClone[count] = (GameObject)Instantiate (g, new Vector3 (0, 0, 0), t);
+<<<<<<< HEAD
 		spearClone[count].GetComponent<Rigidbody>().velocity = randomDirection * spearSpeed;
+=======
+		spearClone[count].rigidbody.velocity = randomDirection * spearSpeed;
+>>>>>>> FETCH_HEAD
 
 
 	}

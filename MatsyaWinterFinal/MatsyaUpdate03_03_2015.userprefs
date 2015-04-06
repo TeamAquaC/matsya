@@ -1,0 +1,24 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/outerFishSwim.cs">
+    <Files>
+      <File FileName="Assets/Scripts/tunaSwim.cs" Line="22" Column="31" />
+      <File FileName="Assets/Scripts/spearSpawn.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/innerFishSpawn.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/midFishSpawn.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/spearHeadBackground.shader" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/spearHandleBackground.shader" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/spearHeadShader.shader" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/spearHandleShader.shader" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/fishBackground.shader" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/fishShader.shader" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/innerFishSwim.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/midFishSwim.cs" Line="22" Column="30" />
+      <File FileName="Assets/Scripts/outerFishSwim.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

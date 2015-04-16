@@ -7,14 +7,14 @@ public class speedChange : MonoBehaviour {
 Text instruction;
 public float speedMod;
 
-	// Use this for initialization
+	// Starting playback speed, with GUI text.
 	void Start () {
 		instruction = GetComponent<Text>();
 		instruction.text = "Normal";
 		speedMod = .6f;
 	}
 	
-	// Update is called once per frame
+	// Playback speeds 1,2,3,4,5 for testing of appropriate game pace.
 	void Update () {
 
 	if(Input.GetKeyDown ("1")){

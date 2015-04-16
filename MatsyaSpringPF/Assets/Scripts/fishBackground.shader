@@ -1,4 +1,7 @@
 ﻿Shader "fishBackground" {
+
+//Fish background will before other objects.
+
     Properties {
       _MainTex ("Texture", 2D) = "white" {}
     }

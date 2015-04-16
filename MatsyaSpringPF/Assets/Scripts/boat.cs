@@ -10,9 +10,10 @@ public class boat : MonoBehaviour {
 	private float degreeVariable;
 	public float boatRate;
 	public Vector3 spearDirection;
+	public GameObject guiTextBox;
 	public GameObject front;
 	public GameObject back;
-	public GameObject guiTextBox;
+
 
 	void Start () 
 	{
@@ -21,6 +22,7 @@ public class boat : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//Define boat vector using empty game objects at front and back.
 
 		boatDirection = Vector3.forward;
 		front.transform.RotateAround(Vector3.zero, Vector3.forward, boatRate * Time.deltaTime);
@@ -28,9 +30,12 @@ public class boat : MonoBehaviour {
 		this.transform.Rotate(boatDirection * boatRate * Time.deltaTime);
 		timer += Time.deltaTime;
 
+		//Get selected game speed.
+
 		speedChange speedScript = guiTextBox.GetComponent<speedChange>();
 		float speedModBoat = speedScript.speedMod;
 
+		//Randomize boat rotational speed. Even ints rotate counterclockwise, odds rotate clockwise.
 
 		if (timer >= 2) {
 

@@ -4,6 +4,8 @@ using System.Collections;
 public class fishExplode : MonoBehaviour {
 
 
+	//Instantiates a particle effect for when a fish is destroyed.
+
 	GameObject boom;
 	public GameObject fishDying;
 

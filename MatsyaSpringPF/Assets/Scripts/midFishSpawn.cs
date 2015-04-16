@@ -15,6 +15,10 @@ public class midFishSpawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		//Count the number of mid fish using tags. If length condition is not surpassed,
+		//spawn a new fish according to rate.
+
 		GameObject [] objectsWithInnerTag = GameObject.FindGameObjectsWithTag("innerFish");
 		GameObject [] objectsWithMidTag = GameObject.FindGameObjectsWithTag("midFish");
 		
@@ -37,6 +41,8 @@ public class midFishSpawn : MonoBehaviour {
 	
 	void spawn(int count) 
 	{
+		//Script used to instantiate fish as child of ring.
+
 		clone = (GameObject)Instantiate (g, new Vector3 (0, -2.8f, 0), g.transform.rotation);
 		clone.transform.parent = GameObject.Find ("midRingHome").transform;
 		clone.transform.localScale -= new Vector3 (.08f, .08f, .08f);

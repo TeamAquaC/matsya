@@ -15,6 +15,10 @@ public class outerFishSpawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		//Count the number of outer fish using tags. If length condition is not surpassed,
+		//spawn a new fish according to rate.
+
 		GameObject [] objectsWithMidTag = GameObject.FindGameObjectsWithTag("midFish");
 		GameObject [] objectsWithOuterTag = GameObject.FindGameObjectsWithTag("outerFish");
 		
@@ -37,6 +41,8 @@ public class outerFishSpawn : MonoBehaviour {
 	
 	void spawn(int count) 
 	{
+		//Script used to instantiate fish as child of ring.
+
 		clone = (GameObject)Instantiate (g, new Vector3 (0, -4.4f, 0), g.transform.rotation);
 		clone.transform.parent = GameObject.Find ("largeRingHome").transform;
 	}

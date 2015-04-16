@@ -1,6 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
+//This is a really big mess of conditional statements,
+//intended to scale the camera lens and change music
+//depending on how many fish are in certain rings.
+//Buyer beware.
+
 public class cameraMove : MonoBehaviour {
 	//float timer;
 	AudioSource[] allAudios;
@@ -16,8 +21,10 @@ public class cameraMove : MonoBehaviour {
 	int count = 0;
 	int countStart;
 
-	// Use this for initialization
+	// Use this for initialization of audio, camera size
 	void Start () {
+
+
 		elapsedInner = 1.0f;
 		allAudios = Camera.main.gameObject.GetComponents<AudioSource>();
 		allAudios [0].Play ();

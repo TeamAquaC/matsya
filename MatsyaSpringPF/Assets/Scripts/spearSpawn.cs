@@ -30,6 +30,8 @@ public class spearSpawn : MonoBehaviour {
 
 		newSpawnRate = spawnRate;
 
+		//Get boat vector direction at time of instantiation.
+
 		randomDirection = boatFront.transform.position - boatBack.transform.position;
 		timer += Time.deltaTime;
 
@@ -54,8 +56,12 @@ public class spearSpawn : MonoBehaviour {
 
 	void spawn(int count) 
 	{
+		//Spear instantiated velocity relative to selected game speed.
+
 		speedChange speedScript = guiTextBox.GetComponent<speedChange>();
 		float speedModSpear = speedScript.speedMod;
+
+		//Instantiate spear at origin according to boat's direction.
 
 		if (spearClone [count] != null) {
 			Object.Destroy( spearClone[count]);

@@ -11,6 +11,9 @@ public class midFishSwim : MonoBehaviour {
 	
 	void Start () 
 	{
+		//Reference fish doesnt swim.
+		//Other fish swim at random speed.
+
 		innerFishSpawn innerRing = clone.GetComponent<innerFishSpawn> ();
 		int countStart = innerRing.count;
 		
@@ -41,10 +44,10 @@ public class midFishSwim : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		//Define circular motion of fish.
+
 		speedChange speedScript = guiTextBox.GetComponent<speedChange>();
 		float speedModMidFish = speedScript.speedMod;
-
-		// Spin the object around the world origin at 20 degrees/second.
 		transform.RotateAround (Vector3.zero, Vector3.forward, speedModMidFish * newSpeed * Time.deltaTime);
 		
 	}

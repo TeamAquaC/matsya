@@ -10,6 +10,7 @@ public class Quad : MonoBehaviour
 	private Vector3 _rotation;
 	private bool _isRotating;
 	private Vector3 _clickDrag;
+
 	void Start ()
 	{
 		_sensitivity = 0.4f;
@@ -18,6 +19,8 @@ public class Quad : MonoBehaviour
 	
 	void Update()
 	{
+		//Click and drag on (hidden) cylinder to ring and fish.
+
 		_clickDrag = Camera.main.ScreenToViewportPoint (Input.mousePosition);
 
 		if(_isRotating)
@@ -69,27 +72,3 @@ public class Quad : MonoBehaviour
 	}
 	
 }
-
-/*Extra Notes
- * 
- * 
- * 
- * 
- * 
-using UnityEngine;
-using System.Collections;
-public class DragAndDrop : MonoBehaviour {
-	private Vector3 screenPoint, offset;
-	
-	void OnMouseDown() { //Select object
-		screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-		offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
-		                                                                                    Input.mousePosition.y, screenPoint.z));
-	}
-	void OnMouseDrag() {
-		Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-		Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset - new Vector3(0,0, - 0.8561556f);
-		transform.parent.position = curPosition;
-	}
-}
-*/

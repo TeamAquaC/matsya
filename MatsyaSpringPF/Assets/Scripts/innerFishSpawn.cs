@@ -15,10 +15,11 @@ public class innerFishSpawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//Count the number of small fish using tags. If length condition is not surpassed,
+		//spawn a new fish according to rate.
+
 		GameObject [] objectsWithTag = GameObject.FindGameObjectsWithTag("innerFish");
-		
-		//speedChange speedScript = guiTextBox.GetComponent<speedChange>();
-		//float speedModInnFishSpawn = speedScript.speedMod;
+
 
 
 		if (objectsWithTag.Length > 6)
@@ -40,6 +41,8 @@ public class innerFishSpawn : MonoBehaviour {
 	
 	void spawn(int count) 
 	{
+		//Script used to instantiate fish as child of ring.
+
 		clone = (GameObject)Instantiate (g, new Vector3 (0 , -1.7f, 0), g.transform.rotation);
 		clone.transform.parent = GameObject.Find ("smallRingHome").transform;
 		clone.transform.localScale -= new Vector3 (0.1f, 0.1f, 0.1f);
